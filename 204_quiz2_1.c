@@ -36,53 +36,42 @@ int main()
     }
     else
     {
-        for ( i = 2; i < a; i++)
+        for ( i = 2; i <=a; i++)
         {
             if (a%i==0)
             {
                 a=a/i;
                 x++;
-                for ( j = 2; i < a; i++)
-                {
-                    if (a%i==0)
-                    {
-                        a=a=a/i;
-                        x++;
-                        for ( k = 2; k < a; k++)
-                        {
-                           if (a%j==0)
-                           {
-                               a=a=a/i;
-                                x++;
-                           }
-                           else if (a==1)
-                            {
-                                break;
-                            }
-                        }
-                        
-                    }
-                    else if (a==1)
-                    {
-                        break;
-                    }
-                    
-                }
+               if (a%i==0)
+               {
+                   a=a/i;
+                   x++;
+                   if (a%i==0)
+                   {
+                       a=a/i;
+                       x++;
+                   }
+                   else
+                   {
+                       break;
+                   }
+                   
+               }
+               else
+               {
+                   break;
+               }
+               
             }
-            else if (a==1)
+            else
             {
-                break;
-            }
-            
+                continue;
+            } 
         }  
     }
-    printf("%d",x);
-     /*if (x>=3)
+     if (x>=3)
         {
             printf("Not Cube Free");
         }
-        else
-        {
-            printf("%d",z-1);
-        }*/
-}
+        
+} 
