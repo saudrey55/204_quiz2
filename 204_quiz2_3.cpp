@@ -22,21 +22,20 @@ int main()
     d[j]=x%10;
     x=x/10;
     }
-    int z,b=0;
+    int b=0;
      for ( j = 0; j <10; j++)
     {
     if (d[j]==n)
      {
         b++;
-        printf("%d\n",b);
+      
      }
     else
     {
         continue;
     }
     }
-    
+    cout<<b;
 
-    printf("%d",b);
     
 }
